@@ -1,5 +1,5 @@
 export function Header() {
     return (
-        <div className="header">ABDIKIM CINEMA</div>
+        <div className="header">AZILEX CINEMA</div>
     )
 }

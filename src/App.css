@@ -12,7 +12,6 @@
   background-image: url("background_IMG_Avengers.jpg");
   background-size: cover;
   background-attachment: fixed;
-  height: 2000px;
 
   display: flex;
   flex-direction: column;
@@ -72,8 +71,27 @@
 }
 
 
+.AboutUsContent ul, ol {
+  margin-left: 10%;
+}
+
+#AboutUsTitle {
+  text-align: center;
+  padding-bottom: 5%;
+  margin-top: 3%;
+  font-size: 60px;
+}
 
 
+li {
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 2%;
+  font-size: large;
+}
+
+.UserImg {
+  height: 300px;
+}
 
 /* 
 @media (prefers-reduced-motion: no-preference) {
