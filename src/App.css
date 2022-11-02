@@ -2,26 +2,22 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
+  scroll-behavior: smooth;
 }
 
 .App {
-  padding-top: 1px;
-  background-color:grey;
+  padding: 14%;
+  padding-top: 400px;
   min-height: 100vh;
+  background-image: url("background_IMG_Avengers.jpg");
+  background-size: cover;
+  background-attachment: fixed;
+  height: 2000px;
 
   display: flex;
   flex-direction: column;
 }
 
-.content {
-  flex-grow: 1;
-  background-color: aqua;
-}
-
-.footer {
-  height: 80px;
-  background-color: chartreuse;
-}
 
 .header {
   margin: 5%;
@@ -29,12 +25,16 @@
   border: 1px solid black;
   border-radius: 2000px 100px 700px 1000px;
   font-size: 70px;
-  background-color: gainsboro;
-  color: rgb(105, 0, 131);
+  background-color: rgba(217, 149, 232, 0.4);
+  color: rgb(250, 52, 52, 0.9);
 }
 
 .nav-bar {
   text-align: center;
+  margin: 20px;
+  margin-top: 0px;
+  padding-bottom: 60px;
+  padding-top: 40px;
 }
 
 .nav-component {
@@ -46,13 +46,34 @@
   border-radius: 100px 200px 100px 60px;
   
   box-shadow: inset 0 0 0 0 blue;
-  transition: ease 0.6s;
+  transition: ease 0.3s;
 }
 
 .nav-component:hover {
   color: white;
-  box-shadow: inset 5px 2px 10px 30px rgb(105, 0, 131);
+  box-shadow: inset 0px 0px 10px 20px rgb(105, 0, 131);
 }
+
+.nav-component:active {
+  box-shadow: none;
+  transition: none;
+  background-color: black;
+  color: white;
+}
+
+.content {
+  flex-grow: 1;
+  background-color: rgb(0, 255, 255, 0.7);
+}
+
+.footer {
+  height: 80px;
+  background-color: rgb(128, 255, 0, 0.7);
+}
+
+
+
+
 
 /* 
 @media (prefers-reduced-motion: no-preference) {
