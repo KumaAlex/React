@@ -1,9 +1,7 @@
 import './App.css';
 import { Header } from './Components/header';
-import { Content } from './Components/content';
 import { Footer } from './Components/footer';
 import { Navigation } from './Components/navigation';
-import { Counter } from './Components/Counter';
 import { Route, Routes } from "react-router-dom";
 import {Main} from "./Pages/Main";
 import {AboutUs} from "./Pages/AboutUs";
@@ -13,7 +11,6 @@ import {Profile} from "./Pages/Profile";
 import {Browse} from "./Pages/Browse";
 
 function App() {
-  const arr = [1, 2, 3, 4];
   return (
     <>
       <div className="App">
