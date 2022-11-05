@@ -6,8 +6,7 @@
 }
 
 .App {
-  padding: 14%;
-  padding-top: 400px;
+  padding: 0 10% 5%;
   min-height: 100vh;
   background-image: url("background_IMG_Avengers.jpg");
   background-size: cover;
