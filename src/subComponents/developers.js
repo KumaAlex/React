@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 
-export function Jopa() {
+export function Developers() {
     
   let moderators = [
     {
@@ -8,7 +8,7 @@ export function Jopa() {
       Surname: "Kim",
       Age: 19,
       Gender: "male",
-      Img: "https://www.pngkey.com/png/full/83-834045_download-panda-png.png",
+      Img: "https://pngimg.com/uploads/panda/panda_PNG37.png",
       Status: "subJunior WEB developer, 3rd year student of KBTU university",
     }, 
     {
@@ -16,7 +16,7 @@ export function Jopa() {
       Surname: "Abdipattaev",
       Age: 19,
       Gender: "male",
-      Img: "https://sun1-86.userapi.com/s/v1/ig2/QUyMnwyMSRsuy0kb2QjiOddttrlOMVSezLi9zLupG7tUywN7PL5I2-p_4UFg02XolwuyrYhHIyWXBEP9dXSSZrLV.jpg?size=400x400&quality=95&crop=0,111,469,469&ava=1",
+      Img: "https://www.freepnglogos.com/uploads/lion-logo-png/lion-logo-7.png",
       Status: "Junior WEB developer, 3rd year student of KBTU university",
     },
     {
@@ -24,45 +24,44 @@ export function Jopa() {
       Surname: "Kaliev",
       Age: 20,
       Gender: "male",
-      Img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ7nUw0zFMXd7_X0f72F9rP1z3E6mNkVSWyDQ&usqp=CAU",
+      Img: "https://images.squarespace-cdn.com/content/v1/58a619e6d2b85757625ede31/1613488931589-HNRVE7NYGSB64O7CM6E9/Untitled+design+-+2021-02-16T152025.674.png",
       Status: "Junior WEB developer, 3rd year student of KBTU university",
     }
   ]
   
-  const [jopa, setJopa] = useState()
+  const [developers, setDevelopers] = useState()
   useEffect(() => {
-    let demoJopa = [];
+    let demoDevelopers = [];
 
     for (let i of moderators) {
-      demoJopa.push( (
+      demoDevelopers.push( (
         <tr>
-              <th>
-                
-                <img className='UserImg' src={i.Img}></img>
-                </th>
-                <th>
-                  <ul>
-                    <li>
-                      {i.Name} {i.Surname}
-                    </li>
-                    <li>
-                      {i.Age}                 
-                    </li>
-                    <li>
-                      {i.Gender}
-                    </li>
-                    <li>
-                      {i.Status}
-                    </li>
-                  </ul>
-                </th>
-              </tr>
+            <th> 
+              <img className='UserImg' src={i.Img}></img>
+            </th>
+            <th>
+              <ul>
+                <li>
+                  {i.Name} {i.Surname}
+                </li>
+                <li>
+                  {i.Age}                 
+                </li>
+                <li>
+                  {i.Gender}
+                </li>
+                <li>
+                  {i.Status}
+                </li>
+              </ul>
+            </th>
+        </tr>
       )
       )
     }
-    setJopa(demoJopa);
+    setDevelopers(demoDevelopers);
   }, [])
 
 
-  return (jopa);
+  return (developers);
 }

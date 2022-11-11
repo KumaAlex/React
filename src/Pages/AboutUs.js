@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { Jopa } from '../subComponents/developers';
+import { Developers } from '../subComponents/developers';
 
 
 
@@ -18,7 +18,7 @@ export function AboutUs() {
 
       
             <table>
-              <Jopa/>
+              <Developers/>
             </table>
 
             {/* <ol className='internalUL'>
