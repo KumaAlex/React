@@ -84,21 +84,18 @@ export function FooterComponents() {
     let demoFooterComponents = [];
 
     for (let i of footerComponents) {
+        let newDemoArr = [];
+        for (let j of i.foSubCom) {
+            newDemoArr.push(
+              <div className='footerCompSubName'><a href={j.Link}>{j.Name}</a></div>                
+            )
+
+        }
         demoFooterComponents.push( (
-        <tr>
-            <th>
-                <h2>{i.Name}</h2>
-            </th>
-            <th>
-                <ul>
-                    for (let j of {i.foSubCom}) {
-                        <li>
-                            <h3><a href={j.Link}>{j.Name}</a></h3>
-                        </li>
-                    }
-                </ul>
-            </th>
-        </tr>
+        <td>
+            <h2 className='footerCompName'>{i.Name}</h2>
+            {newDemoArr}
+        </td>
       )
       )
     }
@@ -106,5 +103,5 @@ export function FooterComponents() {
   }, [])
 
 
-  return (footerComponents);
+  return (components);
 }

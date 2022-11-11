@@ -64,11 +64,6 @@
   background-color: rgb(0, 255, 255, 0.7);
 }
 
-.footer {
-  height: 80px;
-  background-color: rgb(128, 255, 0, 0.7);
-}
-
 
 .AboutUsContent ul, ol {
   margin-left: 10%;
@@ -90,6 +85,32 @@ li {
 
 .UserImg {
   height: 300px;
+}
+
+
+
+.footer {
+  background-color: rgba(97, 97, 97, 0.8);
+  padding: 50px;
+  color: white;
+  border: 1px white solid;
+  border-radius: 4px 4px 100px 100px;
+}
+
+.footerCompName {
+  text-align: left;
+  margin-right: 220px;
+  margin-bottom: 20px;
+}
+
+.footerCompSubName a {
+  font-size: medium;
+  text-decoration: none;
+  color: white;
+}
+
+.footerCompSubName a:hover {
+  color:rgb(105, 0, 131);
 }
 
 /* 
