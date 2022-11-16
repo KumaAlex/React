@@ -1,9 +1,10 @@
 import React, { useEffect, useState } from 'react';
 
-export function Developers() {
+export function Developer() {
     
   let moderators = [
     {
+      ID: 1,
       Name: "Alex",
       Surname: "Kim",
       Age: 19,
@@ -12,6 +13,7 @@ export function Developers() {
       Status: "subJunior WEB developer, 3rd year student of KBTU university",
     }, 
     {
+      ID: 2,
       Name: "Azimbek",
       Surname: "Abdipattaev",
       Age: 19,
@@ -20,6 +22,7 @@ export function Developers() {
       Status: "Junior WEB developer, 3rd year student of KBTU university",
     },
     {
+      ID: 3,
       Name: "Alikhan",
       Surname: "Kaliev",
       Age: 20,
@@ -29,39 +32,70 @@ export function Developers() {
     }
   ]
   
-  const [developers, setDevelopers] = useState()
-  useEffect(() => {
-    let demoDevelopers = [];
-
-    for (let i of moderators) {
-      demoDevelopers.push( (
-        <tr>
-            <th> 
-              <img className='UserImg' src={i.Img}></img>
-            </th>
-            <th>
-              <ul>
-                <li>
-                  {i.Name} {i.Surname}
-                </li>
-                <li>
-                  {i.Age}                 
-                </li>
-                <li>
-                  {i.Gender}
-                </li>
-                <li>
-                  {i.Status}
-                </li>
-              </ul>
-            </th>
-        </tr>
-      )
-      )
-    }
-    setDevelopers(demoDevelopers);
-  }, [])
+  const [developers, setDevelopers] = useState(moderators)
 
 
-  return (developers);
+  return(
+    <table>
+        {developers.length > 0 && developers.map((o, i) => (
+            <tr key={o.ID}>
+                <th> 
+                    <img className='UserImg' src={o.Img}></img>
+                </th>
+                <th>
+                    <ul>
+                        <li>
+                            {o.Name} {o.Surname}
+                        </li>
+                        <li>
+                            {o.Age}                 
+                        </li>
+                        <li>
+                            {o.Gender}
+                        </li>
+                        <li>
+                            {o.Status}
+                        </li>
+                    </ul>
+                </th>
+            </tr>
+        ))}
+    </table>
+  )
+
+
+//     useEffect(() => {
+//     let demoDevelopers = [];
+
+//     for (let i of moderators) {
+//       demoDevelopers.push( (
+//         <tr>
+//             <th> 
+//               <img className='UserImg' src={o.Img}></img>
+//             </th>
+//             <th>
+//               <ul>
+//                 <li>
+//                   {o.Name} {o.Surname}
+//                 </li>
+//                 <li>
+//                   {o.Age}                 
+//                 </li>
+//                 <li>
+//                   {o.Gender}
+//                 </li>
+//                 <li>
+//                   {o.Status}
+//                 </li>
+//               </ul>
+//             </th>
+//         </tr>
+//       )
+//       )
+//     }
+//     setDevelopers(demoDevelopers);
+//   }, [])
+
+
+//  return (developers);
 }
