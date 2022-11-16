@@ -14,10 +14,14 @@ export function AboutUs() {
 
         <ul>
 
-          <li>AziLex cinema was created by Alexander Kim and Azimber Abdipataev</li>
-          <li>Description: there are many different types of movies and animes</li>
-          <li> Partners: <Developer/> </li>
+          <li>AziLex cinema was created by Alexander Kim and Azimbek Abdipattaev</li>
+          <li>Description: On our AziLex website, you can 
+            keep track of news and trends in the film industry and animated cartoons.
+            There are reviews of all films of all genres for all ages, from children to 18+</li>
+          <li>The main goal of our project is to show our clients the descriptions and ratings of films</li>
           <li>Supported by: Yerlan Karabaliyev - React js lecturer, Java developer and etc.</li>
+          <li> Partners: <Developer/> </li>
+          
 
         </ul>
 
