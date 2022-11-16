@@ -2,17 +2,14 @@ import {Link} from "react-router-dom";
 
 export function Navigation() {
 
-  function windowLocation() {
-    window.location.assign("#navPart")
-  }
     return (
         <div className="nav-bar" id = "navPart">
-          <div><Link to={"/"}><button className="nav-component" onClick={windowLocation}>Main</button></Link></div>
-          <div><Link to={"/movies"}><button className="nav-component" onClick={windowLocation}>Movies</button></Link></div>
-          <div><Link to={"/premieres"}><button className="nav-component" onClick={windowLocation}>Premieres</button></Link></div>
-          <div><Link to={"/browse"}><button className="nav-component" onClick={windowLocation}>Browse</button></Link></div>
-          <div><Link to={"/about"}><button className="nav-component" onClick={windowLocation}>About Us</button></Link></div>
-          <div><Link to={"/profile"}><button className="nav-component" onClick={windowLocation}>Profile</button></Link></div>
+          <Link to={"/"} className="nav-component">Main</Link>
+          <Link to={"/movies"} className="nav-component">Movies</Link>
+          <Link to={"/premieres"} className="nav-component">Premieres</Link>
+          <Link to={"/browse"} className="nav-component">Browse</Link>
+          <Link to={"/about"} className="nav-component">About Us</Link>
+          <Link to={"/profile"} className="nav-component">Profile</Link>
         </div>
     )
 }
