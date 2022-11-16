@@ -1,11 +1,11 @@
-import { FooterComponents } from "../subComponents/footerComponents"
+import { FooterComponent } from "../subComponents/footerComponents"
 
 export function Footer() {
     return(
         <div className="footer">
-            <table>
-                <FooterComponents />
-            </table>
+
+            <FooterComponent/>
+
         </div>
     )
 }

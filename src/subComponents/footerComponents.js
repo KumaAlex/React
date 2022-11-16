@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from 'react';
 
-export function FooterComponents() {
+export function FooterComponent() {
     
-  let footerComponents = [
+  const footerComponents = [
     {
         Name: "Users and partners",
         foSubCom: [{
@@ -79,29 +79,40 @@ export function FooterComponents() {
     },
   ]
   
-  const [components, setComponents] = useState()
+  const [components, setComponents] = useState(footerComponents)
+
+  const fetchData = () => {
+    return fetch("").then((response) => response.json()).then((data) => setComponents(data));
+  }
+
   useEffect(() => {
-    let demoFooterComponents = [];
-
-    for (let i of footerComponents) {
-        let newDemoArr = [];
-        for (let j of i.foSubCom) {
-            newDemoArr.push(
-              <div className='footerCompSubName'><a href={j.Link}>{j.Name}</a></div>                
-            )
-
-        }
-        demoFooterComponents.push( (
-        <td>
-            <h2 className='footerCompName'>{i.Name}</h2>
-            {newDemoArr}
-        </td>
-      )
-      )
-    }
-    setComponents(demoFooterComponents);
-  }, [])
+    fetchData();
+  },[])
 
 
-  return (components);
+  function sub(object) {
+    return (
+        <div>
+            {object.length > 0 && object.map((obj, ind) => (
+                <div className='footerCompSubName' key={ind}><a href={obj.Link} target="_blank" rel="noreferrer">{obj.Name}</a></div>   
+            ))}
+        </div>
+    )
+  }
+
+
+
+  return (
+    <table>
+
+        {components.length > 0 && components.map((o, i) => (
+            <td key={o.i}>
+                <h2 className='footerCompName'>{o.Name}</h2>
+                {sub(o.foSubCom)}
+            </td>
+        ))}
+
+    </table>
+
+  );
 }

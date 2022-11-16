@@ -1,8 +1,10 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState } from "react";
+
+
 
 export function Developer() {
     
-  let moderators = [
+  const moderators = [
     {
       ID: 1,
       Name: "Alex",
@@ -34,11 +36,19 @@ export function Developer() {
   
   const [developers, setDevelopers] = useState(moderators)
 
+  const fetchData = () => {
+    return fetch("").then((response) => response.json()).then((data) => setDevelopers(data));
+  }
+
+  useEffect(() => {
+    fetchData();
+  },[])
+
 
   return(
     <table>
         {developers.length > 0 && developers.map((o, i) => (
-            <tr key={o.ID}>
+            <tr key={o.i}>
                 <th> 
                     <img className='UserImg' src={o.Img}></img>
                 </th>
@@ -62,40 +72,4 @@ export function Developer() {
         ))}
     </table>
   )
-
-
-//     useEffect(() => {
-//     let demoDevelopers = [];
-
-//     for (let i of moderators) {
-//       demoDevelopers.push( (
-//         <tr>
-//             <th> 
-//               <img className='UserImg' src={o.Img}></img>
-//             </th>
-//             <th>
-//               <ul>
-//                 <li>
-//                   {o.Name} {o.Surname}
-//                 </li>
-//                 <li>
-//                   {o.Age}                 
-//                 </li>
-//                 <li>
-//                   {o.Gender}
-//                 </li>
-//                 <li>
-//                   {o.Status}
-//                 </li>
-//               </ul>
-//             </th>
-//         </tr>
-//       )
-//       )
-//     }
-//     setDevelopers(demoDevelopers);
-//   }, [])
-
-
-//  return (developers);
 }
