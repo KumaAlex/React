@@ -1,0 +1,116 @@
+{
+  "moderators": [
+    {
+      "ID": 1,
+      "Name": "Alex",
+      "Surname": "Kim",
+      "Age": 19,
+      "Gender": "male",
+      "Img": "https://pngimg.com/uploads/panda/panda_PNG37.png",
+      "Status": "subJunior WEB developer, 3rd year student of KBTU university"
+    },
+    {
+      "ID": 2,
+      "Name": "Azimbek",
+      "Surname": "Abdipattaev",
+      "Age": 19,
+      "Gender": "male",
+      "Img": "https://www.freepnglogos.com/uploads/lion-logo-png/lion-logo-7.png",
+      "Status": "Junior WEB developer, 3rd year student of KBTU university"
+    }
+  ],
+  "footerComponents": [
+    {
+      "Name": "Users and partners",
+      "foSubCom": [
+        {
+          "Name": "All about subscriptions",
+          "Link": "",
+          "Data": ""
+        },
+        {
+          "Name": "Bonuses and gifts",
+          "Link": "",
+          "Data": ""
+        },
+        {
+          "Name": "Activate promocode",
+          "Link": "",
+          "Data": ""
+        },
+        {
+          "Name": "Agreement",
+          "Link": "",
+          "Data": ""
+        },
+        {
+          "Name": "About us",
+          "Link": "",
+          "Data": ""
+        },
+        {
+          "Name": "Media contacts",
+          "Link": "",
+          "Data": ""
+        },
+        {
+          "Name": "Add a podcast",
+          "Link": "",
+          "Data": ""
+        },
+        {
+          "Name": "Collaboration",
+          "Link": "",
+          "Data": ""
+        }
+      ]
+    },
+
+    {
+      "Name": "On devices",
+      "foSubCom": [
+        {
+          "Name": "TVs and media players",
+          "Link": "",
+          "Data": ""
+        },
+        {
+          "Name": "Mobile devices",
+          "Link": "",
+          "Data": ""
+        },
+        {
+          "Name": "A computer",
+          "Link": "",
+          "Data": ""
+        },
+        {
+          "Name": "Connect TV",
+          "Link": "",
+          "Data": ""
+        }
+      ]
+    },
+
+    {
+      "Name": "Support",
+      "foSubCom": [
+        {
+          "Name": "Phone number",
+          "Link": "",
+          "Data": "8 800 555 35 35"
+        },
+        {
+          "Name": "Mail",
+          "Link": "",
+          "Data": "Jopka@gmail.com"
+        },
+        {
+          "Name": "Q/A",
+          "Link": "",
+          "Data": "We will answer ur Q during 3 days"
+        }
+      ]
+    }
+  ]
+}
