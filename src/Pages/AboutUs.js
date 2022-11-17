@@ -1,7 +1,20 @@
-import React from "react";
+import React, {useEffect, useState} from "react";
 import { Developer } from "../Components/developers";
 
 export function AboutUs() {
+  const [developers, setDevelopers] = useState([]);
+
+  const fetchData = () => {
+    return fetch("./fake_data.json")
+      .then((response) => response.json())
+      .then((data) => setDevelopers(data.moderators));
+  };
+
+  useEffect(() => {
+    fetchData().then();
+  }, []);
+
+
   return (
     <div className="content AboutUs">
       <h2 id="AboutUsTitle">About us</h2>
@@ -26,7 +39,12 @@ export function AboutUs() {
           </li>
           <li>
             {" "}
-            Partners: <Developer />{" "}
+            Partners: {" "}
+            <div>
+              {developers.map((developer) => (
+                <Developer developer={developer} key={developer.ID} />
+              ))}
+            </div>
           </li>
         </ul>
       </div>

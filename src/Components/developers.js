@@ -1,40 +1,24 @@
 import React, { useEffect, useState } from "react";
 
-export function Developer() {
-  const [developers, setDevelopers] = useState([]);
+export function Developer({ developer }) {
 
-  const fetchData = () => {
-    return fetch("./fake_data.json")
-      .then((response) => response.json())
-      .then((data) => setDevelopers(data.moderators));
-  };
-
-  useEffect(() => {
-    fetchData();
-  }, []);
 
   return (
-    <table>
-      <tbody>
-        {developers.length > 0 &&
-          developers.map((o, i) => (
-            <tr key={i}>
-              <th>
-                <img className="UserImg" src={o.Img} alt="avatar"></img>
-              </th>
-              <th>
+
+            <div className="dev-info-block">
+              <div>
+                <img className="UserImg" src={developer.Img} alt="avatar"></img>
+              </div>
+              <div className="dev-info">
                 <ul>
                   <li>
-                    {o.Name} {o.Surname}
+                    {developer.Name} {developer.Surname}
                   </li>
-                  <li>{o.Age}</li>
-                  <li>{o.Gender}</li>
-                  <li>{o.Status}</li>
+                  <li>{developer.Age}</li>
+                  <li>{developer.Gender}</li>
+                  <li>{developer.Status}</li>
                 </ul>
-              </th>
-            </tr>
-          ))}
-      </tbody>
-    </table>
+              </div>
+            </div>
   );
 }
