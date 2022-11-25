@@ -30,9 +30,12 @@
   position: fixed;
   top: 22%;
   left: -9%;
+  border-top: 4px solid rgb(106, 45, 45);
+  border-bottom: 4px solid rgb(106, 45, 45);
   border-right: 16px solid rgb(106, 45, 45);
   padding: 10px;
   transition: 0.3s;
+  border-radius: 0 60px 60px 0;
   background-color: rgb(101, 101, 101, 0.7);
   /* text-align: center;
   margin: 20px;
@@ -55,7 +58,7 @@
   border-radius: 100px 200px 100px 60px;
   margin-bottom: 20px;
   margin-top: 10px;
-  box-shadow: inset 0 0 0 0 blue;
+  box-shadow: inset 0 0 0 0 rgb(42, 42, 238);
   transition: ease 0.3s;
 
   background-color: white;
@@ -134,7 +137,7 @@ li {
 }
 
 .footerCompSubName a:hover {
-  color: rgb(105, 0, 131);
+  color: rgb(35, 0, 209);
 }
 
 .footer-content {
