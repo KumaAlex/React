@@ -1,7 +1,7 @@
-import React from 'react';
+import React from "react";
 
 export function Movies() {
-  return (
-    <div className="content">Movies page</div>
-  );
+  const moviesApi = "https://api.themoviedb.org/3/movie";
+
+  return <div className="content">Movies</div>;
 }

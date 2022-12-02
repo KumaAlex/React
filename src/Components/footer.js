@@ -3,14 +3,14 @@ import React, { useEffect, useState } from "react";
 export function Footer() {
   const [components, setComponents] = useState([]);
 
-  const fetchData = () => {
+  const fetchFakeData = () => {
     return fetch("./fake_data.json")
       .then((response) => response.json())
       .then((data) => setComponents(data.footerComponents));
   };
 
   useEffect(() => {
-    fetchData();
+    fetchFakeData().then();
   }, []);
 
   function sub(object) {
@@ -27,6 +27,7 @@ export function Footer() {
       </div>
     );
   }
+
   return (
     <div className="footer">
       {/* <table>
