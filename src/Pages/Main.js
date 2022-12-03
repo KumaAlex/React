@@ -12,7 +12,7 @@ export function Main() {
       const response = await axios.get(
         `${moviesApi}/popular?api_key=498f0c94da7ca8672cee0f261723823a`
       );
-      setPopularMovies(response.data.results);
+      setPopularMovies(response.data.results.slice(0, 5));
       // console.log(response.data.results)
     } catch (error) {
       console.error(error);
@@ -30,8 +30,7 @@ export function Main() {
           Millions of movies, and TV shows. Explore now.
         </div>
       </div>
-      <div className="search">Search here</div>
-      <div className="">Popular movies</div>
+      <h3 className="">Popular</h3>
       <div className="popular-movies">
         {popularMovies.map((movie) => (
           <MovieCard movie={movie} key={movie.id} />

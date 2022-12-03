@@ -7,10 +7,10 @@ import { Main } from "./Pages/Main";
 import { AboutUs } from "./Pages/AboutUs";
 import { Movies } from "./Pages/Movies";
 import { Premieres } from "./Pages/Premieres";
-import { Profile } from "./Pages/Profile";
 import { Browse } from "./Pages/Browse";
 import MovieDetailPage from "./Pages/MovieDetailPage";
 import GenreDetailPage from "./Pages/GenreDetailPage";
+import NotFound from "./Pages/NotFound";
 
 function App() {
   return (
@@ -25,8 +25,9 @@ function App() {
           <Route path="/movies/:id" element={<MovieDetailPage />}></Route>
           <Route path="/genre/:id" element={<GenreDetailPage />}></Route>
           <Route path="/premieres" element={<Premieres />}></Route>
-          <Route path="/profile" element={<Profile />}></Route>
+          {/*<Route path="/profile" element={<Profile />}></Route>*/}
           <Route path="/browse" element={<Browse />}></Route>
+          <Route path="*" element={<NotFound />}></Route>
         </Routes>
 
         <Footer />
