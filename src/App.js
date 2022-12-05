@@ -14,18 +14,10 @@ import { BaseApiValueContext } from "./Context/BaseApiValueContext";
 import { useState } from "react";
 
 function App() {
-  const [movieApi, setMovieApi] = useState(
-    "https://api.themoviedb.org/3/movie"
-  );
-  const [searchApi, setSearchApi] = useState(
-    "https://api.themoviedb.org/3/search/movie"
-  );
-  const [genreApi, setGenreApi] = useState(
-    "https://api.themoviedb.org/3/genre/movie/list"
-  );
-  const [discoverApi, setDiscoverApi] = useState(
-    "https://api.themoviedb.org/3/discover/movie"
-  );
+  const [movieApi] = useState("https://api.themoviedb.org/3/movie");
+  const [searchApi] = useState("https://api.themoviedb.org/3/search/movie");
+  const [genreApi] = useState("https://api.themoviedb.org/3/genre/movie/list");
+  const [discoverApi] = useState("https://api.themoviedb.org/3/discover/movie");
 
   return (
     <>
@@ -33,13 +25,9 @@ function App() {
         <BaseApiValueContext.Provider
           value={{
             movieApi,
-            setMovieApi,
             searchApi,
-            setSearchApi,
             genreApi,
-            setGenreApi,
             discoverApi,
-            setDiscoverApi,
           }}
         >
           <Header />

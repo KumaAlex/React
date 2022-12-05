@@ -4,16 +4,8 @@ import MovieCard from "../Components/MovieCard";
 import { BaseApiValueContext } from "../Context/BaseApiValueContext";
 
 export function Browse() {
-  const {
-    movieApi,
-    setMovieApi,
-    searchApi,
-    setSearchApi,
-    genreApi,
-    setGenreApi,
-    discoverApi,
-    setDiscoverApi,
-  } = React.useContext(BaseApiValueContext);
+  const { movieApi, searchApi, genreApi, discoverApi } =
+    React.useContext(BaseApiValueContext);
 
   const [movies, setMovies] = useState([]);
 
