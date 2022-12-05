@@ -18,7 +18,6 @@ function MovieDetailPage() {
       );
       setMovie(response.data);
       setLoading(false);
-      // console.log(response.data.genres);
     } catch (error) {
       console.error(error.message);
       setError(error.message);
@@ -37,7 +36,14 @@ function MovieDetailPage() {
       {movie && (
         <div className="movie-detail-card">
           <div className="movie-detail-card-img">
-            <img src={`${imagePath}/${movie.poster_path}`} alt="" />
+            <img
+              src={`${
+                movie.poster_path !== null
+                  ? `${imagePath}/${movie.poster_path}`
+                  : "../default-movie.jpg"
+              }`}
+              alt="Logo"
+            />
           </div>
           <div className="movie-detail-body">
             <div className="row">

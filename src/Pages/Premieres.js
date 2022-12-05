@@ -1,16 +1,26 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 import MovieCard from "../Components/MovieCard";
+import { BaseApiValueContext } from "../Context/BaseApiValueContext";
 
 export function Premieres() {
-  const moviesApi = "https://api.themoviedb.org/3/movie";
+  const {
+    movieApi,
+    setMovieApi,
+    searchApi,
+    setSearchApi,
+    genreApi,
+    setGenreApi,
+    discoverApi,
+    setDiscoverApi,
+  } = React.useContext(BaseApiValueContext);
   const [upcomingMovies, setUpcomingMovies] = useState([]);
   const [loading, setLoading] = useState(true);
 
   async function fetchData() {
     try {
       const response = await axios.get(
-        `${moviesApi}/now_playing?api_key=498f0c94da7ca8672cee0f261723823a`
+        `${movieApi}/now_playing?api_key=498f0c94da7ca8672cee0f261723823a`
       );
       setUpcomingMovies(response.data.results);
       setLoading(false);

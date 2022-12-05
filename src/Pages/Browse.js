@@ -1,9 +1,19 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 import MovieCard from "../Components/MovieCard";
+import { BaseApiValueContext } from "../Context/BaseApiValueContext";
 
 export function Browse() {
-  const searchApi = "https://api.themoviedb.org/3/search/movie";
+  const {
+    movieApi,
+    setMovieApi,
+    searchApi,
+    setSearchApi,
+    genreApi,
+    setGenreApi,
+    discoverApi,
+    setDiscoverApi,
+  } = React.useContext(BaseApiValueContext);
 
   const [movies, setMovies] = useState([]);
 

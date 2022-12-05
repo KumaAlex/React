@@ -1,5 +1,5 @@
-import React, {useEffect, useState} from "react";
-import { Developer } from "../Components/developers";
+import React, { useEffect, useState } from "react";
+import { Developer } from "../Components/Developers";
 
 export function AboutUs() {
   const [developers, setDevelopers] = useState([]);
@@ -13,7 +13,6 @@ export function AboutUs() {
   useEffect(() => {
     fetchData().then();
   }, []);
-
 
   return (
     <div className="content AboutUs">
@@ -39,7 +38,7 @@ export function AboutUs() {
           </li>
           <li>
             {" "}
-            Partners: {" "}
+            Partners:{" "}
             <div>
               {developers.map((developer) => (
                 <Developer developer={developer} key={developer.ID} />

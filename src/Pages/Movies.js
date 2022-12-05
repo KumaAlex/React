@@ -1,10 +1,19 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 import MovieCard from "../Components/MovieCard";
+import { BaseApiValueContext } from "../Context/BaseApiValueContext";
 
 export function Movies() {
-  const moviesApi = "https://api.themoviedb.org/3/discover/movie";
-  const genresListApi = "https://api.themoviedb.org/3/genre/movie/list";
+  const {
+    movieApi,
+    setMovieApi,
+    searchApi,
+    setSearchApi,
+    genreApi,
+    setGenreApi,
+    discoverApi,
+    setDiscoverApi,
+  } = React.useContext(BaseApiValueContext);
 
   const [movies, setMovies] = useState([]);
   const [genresList, setGenresList] = useState([]);
@@ -31,13 +40,13 @@ export function Movies() {
   async function fetchData(sort_by, genre, page) {
     try {
       const response = await axios.get(
-        `${moviesApi}?api_key=498f0c94da7ca8672cee0f261723823a&sort_by=${sortBy}&with_genres=${genre}&page=${
+        `${discoverApi}?api_key=498f0c94da7ca8672cee0f261723823a&sort_by=${sortBy}&with_genres=${genre}&page=${
           page > 0 ? page : 1
         }`
       );
 
       const response2 = await axios.get(
-        `${genresListApi}?api_key=498f0c94da7ca8672cee0f261723823a`
+        `${genreApi}?api_key=498f0c94da7ca8672cee0f261723823a`
       );
       setMovies(response.data.results);
       setTotalPages(response.data.total_pages);
