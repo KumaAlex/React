@@ -8,7 +8,11 @@ const MovieCard = ({ movie }) => {
     <div className="movie-card">
       <Link to={`/movies/${movie.id}`}>
         <img
-          src={`${imagePath}/${movie.poster_path}`}
+          src={`${
+            movie.poster_path !== null
+              ? `${imagePath}/${movie.poster_path}`
+              : "./default-movie.jpg"
+          }`}
           alt="img"
           className="movie-card-img"
         />

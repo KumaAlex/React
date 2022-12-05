@@ -231,7 +231,7 @@ a {
 }
 
 /* Search */
-.search-wrapper {
+.wrapper {
     width: 95%;
     margin: 40px 0;
     display: flex;
@@ -239,9 +239,9 @@ a {
     align-items: center;
 }
 
-#search {
+.input, select {
     outline: none;
-    margin-bottom: 40px;
+    margin-bottom: 10px;
     width: 100%;
     padding: 10px;
     border-radius: 1rem;
