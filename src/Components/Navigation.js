@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 export function Navigation() {
   return (
     <div className="nav-bar" id="navPart">
+      <p className="nav-title">&#8592;</p>
       <Link to={"/"} className="nav-component">
         Main
       </Link>

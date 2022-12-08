@@ -22,11 +22,49 @@ a {
 
 .header {
     margin: 5%;
+}
+
+.header-title {
+    /*margin: 5%;*/
     text-align: center;
     border: 1px solid black;
-    border-radius: 2000px 100px 700px 1000px;
+    border-radius: 2000px 100px 0 0;
     font-size: 70px;
     background-color: rgba(217, 149, 232, 0.4);
+    color: rgb(250, 52, 52, 0.9);
+}
+
+.header-nav {
+    display: flex;
+    border-radius: 0 0 700px 1000px;
+    border: 1px solid black;
+    justify-content: space-evenly;
+    background-color: rgba(217, 149, 232, 0.4);
+}
+
+.header-nav a {
+    color: black;
+    font-weight: bolder;
+    padding: 10px;
+}
+
+
+.header-nav a:after {
+    display: block;
+    content: "";
+    border-bottom: solid 3px rgb(250, 52, 52, 0.9);;
+    transform: scaleX(0);
+    transition: transform 250ms ease-in-out;
+    transform-origin: 0% 50%;
+}
+
+.header-nav a:hover {
+    color: rgb(250, 52, 52, 0.9);
+}
+
+
+.header-nav a:hover:after {
+    transform: scaleX(1);
     color: rgb(250, 52, 52, 0.9);
 }
 
@@ -36,7 +74,7 @@ a {
     left: -9%;
     border-top: 4px solid rgb(106, 45, 45);
     border-bottom: 4px solid rgb(106, 45, 45);
-    border-right: 16px solid rgb(106, 45, 45);
+    border-right: 24px solid rgb(106, 45, 45);
     padding: 10px;
     transition: 0.3s;
     border-radius: 0 60px 60px 0;
@@ -81,6 +119,14 @@ a {
     transition: none;
     background-color: black;
     color: white;
+}
+
+.nav-title {
+    position: absolute;
+    left: 142px;
+    top: 44%;
+    color: white;
+    font-size: 1.5rem;
 }
 
 .content {
