@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { Link, useParams } from "react-router-dom";
+import { useParams } from "react-router-dom";
 import axios from "axios";
 
 function MovieDetailPage() {
@@ -65,10 +65,10 @@ function MovieDetailPage() {
             <div className="row">
               <div className="row-title">Genres</div>
               <div className="row-value">
-                {movie.genres.map((g) => (
-                  <Link to={`/genre/${g.id}`} key={g.id}>
-                    {g.name}
-                  </Link>
+                {movie.genres.map((g, index) => (
+                  <p to={`/genre/${g.id}`} key={g.id}>
+                    {g.name} {index < movie.genres.length - 1 ? "," : ""}
+                  </p>
                 ))}
               </div>
             </div>
