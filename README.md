@@ -1,3 +1,24 @@
+AziLex cinema was created by Azimbek Abdipattaev and Alexander Kim.
+The main goal of our project is to show our clients the descriptions and ratings of films.
+
+Description: On our AziLex website, you can keep track of news and trends in the film industry and animated cartoons. There are reviews of all films of all genres for all ages, from children to adults.
+
+
+Group members: 
+1) Aleksandr Kim - 19 y.o. - 3rd year student of KBTU university
+2) Azimbek Abdipattaev - 19 y.o. - 3rd year student of KBTU university
+
+Checked by: Yerlan Karabaliyev
+
+
+
+
+
+
+
+
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
