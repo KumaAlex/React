@@ -6,7 +6,7 @@
       "Surname": "Kim",
       "Age": 19,
       "Gender": "male",
-      "Img": "https://pngimg.com/uploads/panda/panda_PNG37.png",
+      "Img": "./panda.png",
       "Status": "subJunior WEB developer, 3rd year student of KBTU university",
       "Github": "https://github.com/KumaAlex"
     },

@@ -4,8 +4,7 @@ import MovieCard from "../Components/MovieCard";
 import { BaseApiValueContext } from "../Context/BaseApiValueContext";
 
 export function Movies() {
-  const { movieApi, searchApi, genreApi, discoverApi } =
-    React.useContext(BaseApiValueContext);
+  const { genreApi, discoverApi } = React.useContext(BaseApiValueContext);
 
   const [movies, setMovies] = useState([]);
   const [genresList, setGenresList] = useState([]);
@@ -51,6 +50,7 @@ export function Movies() {
 
   useEffect(() => {
     fetchData(sortBy, genre, page).then();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [sortBy, genre, page]);
 
   const sortByOptions = [

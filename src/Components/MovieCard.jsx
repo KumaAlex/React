@@ -2,7 +2,6 @@ import React from "react";
 import { Link } from "react-router-dom";
 
 const MovieCard = ({ movie }) => {
-  const moviesApi = "https://api.themoviedb.org/3/movie";
   const imagePath = "https://image.tmdb.org/t/p/w200";
   return (
     <div className="movie-card">

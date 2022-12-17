@@ -4,8 +4,7 @@ import MovieCard from "../Components/MovieCard";
 import { BaseApiValueContext } from "../Context/BaseApiValueContext";
 
 export function Browse() {
-  const { movieApi, searchApi, genreApi, discoverApi } =
-    React.useContext(BaseApiValueContext);
+  const { searchApi } = React.useContext(BaseApiValueContext);
 
   const [movies, setMovies] = useState([]);
 
@@ -39,6 +38,7 @@ export function Browse() {
 
   useEffect(() => {
     fetchData(searchTerm, page).then();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [searchTerm, page]);
 
   return (
