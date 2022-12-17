@@ -4,10 +4,8 @@ import axios from "axios";
 import { BaseApiValueContext } from "../Context/BaseApiValueContext";
 
 export function Main() {
-  const { movieApi, searchApi, genreApi, discoverApi } =
-    React.useContext(BaseApiValueContext);
+  const { movieApi } = React.useContext(BaseApiValueContext);
   const [popularMovies, setPopularMovies] = useState([]);
-  const [loading, setLoading] = useState(true);
 
   async function fetchData() {
     try {

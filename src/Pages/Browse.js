@@ -4,8 +4,7 @@ import MovieCard from "../Components/MovieCard";
 import { BaseApiValueContext } from "../Context/BaseApiValueContext";
 
 export function Browse() {
-  const { movieApi, searchApi, genreApi, discoverApi } =
-    React.useContext(BaseApiValueContext);
+  const { searchApi } = React.useContext(BaseApiValueContext);
 
   const [movies, setMovies] = useState([]);
 
@@ -27,8 +26,7 @@ export function Browse() {
         const response = await axios.get(
           `${searchApi}/?api_key=498f0c94da7ca8672cee0f261723823a&query=${query}&page=${
             page > 0 ? page : 1
-          }`,
-          { headers: { "Access-Control-Allow-Origin": "*" } }
+          }`
         );
         setMovies(response.data.results);
         setTotalPages(response.data.total_pages);
