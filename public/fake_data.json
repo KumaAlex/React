@@ -7,16 +7,18 @@
       "Age": 19,
       "Gender": "male",
       "Img": "https://pngimg.com/uploads/panda/panda_PNG37.png",
-      "Status": "subJunior WEB developer, 3rd year student of KBTU university"
+      "Status": "subJunior WEB developer, 3rd year student of KBTU university",
+      "Github": "https://github.com/KumaAlex"
     },
     {
       "ID": 2,
       "Name": "Azimbek",
       "Surname": "Abdipattaev",
-      "Age": 19,
+      "Age": 20,
       "Gender": "male",
       "Img": "https://www.freepnglogos.com/uploads/lion-logo-png/lion-logo-7.png",
-      "Status": "Junior WEB developer, 3rd year student of KBTU university"
+      "Status": "Junior WEB developer, 3rd year student of KBTU university",
+      "Github": "https://github.com/therealazimbek"
     }
   ],
   "footerComponents": [

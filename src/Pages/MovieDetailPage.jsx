@@ -27,7 +27,7 @@ function MovieDetailPage() {
 
   useEffect(() => {
     fetchData().then();
-  }, []);
+  });
 
   return (
     <div className="content">
