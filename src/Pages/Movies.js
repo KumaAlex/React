@@ -50,6 +50,7 @@ export function Movies() {
 
   useEffect(() => {
     fetchData(sortBy, genre, page).then();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [sortBy, genre, page]);
 
   const sortByOptions = [

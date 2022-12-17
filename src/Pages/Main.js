@@ -21,6 +21,7 @@ export function Main() {
 
   useEffect(() => {
     fetchData().then();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
   return (
     <div className="content">

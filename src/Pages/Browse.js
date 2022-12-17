@@ -38,6 +38,7 @@ export function Browse() {
 
   useEffect(() => {
     fetchData(searchTerm, page).then();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [searchTerm, page]);
 
   return (

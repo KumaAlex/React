@@ -4,8 +4,7 @@ import MovieCard from "../Components/MovieCard";
 import { BaseApiValueContext } from "../Context/BaseApiValueContext";
 
 export function Premieres() {
-  const { movieApi, searchApi, genreApi, discoverApi } =
-    React.useContext(BaseApiValueContext);
+  const { movieApi } = React.useContext(BaseApiValueContext);
   const [upcomingMovies, setUpcomingMovies] = useState([]);
   const [loading, setLoading] = useState(true);
 
@@ -23,6 +22,7 @@ export function Premieres() {
 
   useEffect(() => {
     fetchData().then();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   return (
